@@ -4,21 +4,20 @@ html, body {
     color: white;
 }
 
-/* rgb(0, 36, 85) */
 :root {
     --color-bg1: #000000;
     --color-bg2: #0F2854;
 
-    --color1: 5, 14, 60;
-    --color2: 0,0,0;
-    --color3: 100, 220, 255; /*izquieda aqua*/
+    --color1: 174, 184, 119;
+    --color2: 91, 35, 255;
+    --color3: 100, 220, 255; 
     --color4: 0, 36, 85; 
     --color5: 191, 201, 209;
 
     --color-interactive: 140, 100, 255;
 
-    --circle-size: 80%;
-    --blending: hard-light;
+    --circle-size: 50vmin;
+    --blending: screen;
 }
 
 .gradient-bg {
@@ -40,8 +39,9 @@ svg {
 }
 
 .gradients-container {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    inset: -20vmin;      
+    filter: blur(90px); 
 }
 
 .g1 {
@@ -53,6 +53,8 @@ svg {
     opacity: 1;
     top: calc(50% - var(--circle-size) / 2);
     left: calc(50% - var(--circle-size) / 2);
+    transform-origin: center center;
+    animation: moveVertical 30s ease infinite;
 }
 
 .g2 {
@@ -64,17 +66,21 @@ svg {
     opacity: 1;
     top: calc(50% - var(--circle-size) / 2);
     left: calc(50% - var(--circle-size) / 2);
+    transform-origin: calc(50% - 24vmin);
+    animation: moveInCircle 20s reverse infinite;
 }
 
 .g3 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3),0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3),0) 80%) no-repeat;
     mix-blend-mode: var(--blending);
     width: var(--circle-size);
     height: var(--circle-size);
     opacity: 1;
-    top: calc(50% - var(--circle-size) / 2 + 200px);
-    left: calc(50% - var(--circle-size) / 2 - 500px);
+    top: calc(50% - var(--circle-size) / 2 + 8vmin);
+    left: calc(50% - var(--circle-size) / 2 - 18vmin);
+    transform-origin: calc(50% + 24vmin);
+    animation: moveInCircle 40s linear infinite;
 }
 
 .g4 {
@@ -86,6 +92,8 @@ svg {
     opacity: 0.7;
     top: calc(50% - var(--circle-size) / 2);
     left: calc(50% - var(--circle-size) / 2);
+    transform-origin: calc(50% - 12vmin);
+    animation: moveHorizontal 40s ease infinite;
 }
 
 .g5 {
@@ -97,4 +105,61 @@ svg {
     opacity: 1;
     top: calc(50% - var(--circle-size));
     left: calc(50% - var(--circle-size));
+    transform-origin: calc(50% - 44vmin) calc(50% + 12vmin);
+    animation: moveInCircle 20s ease infinite;
+}
+
+@keyframes moveInCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveVertical {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes moveHorizontal {
+    0% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+
+    50% {
+        transform: translateX(50%) translateY(10%);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+}
+
+.interactive {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    left: -50%;
+
+    opacity: 0.7;
 }
