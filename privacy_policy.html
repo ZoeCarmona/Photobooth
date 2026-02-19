@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/privacy_policy.css">
 </head>
 <body>
     <div class="gradient-bg">
@@ -19,72 +20,103 @@
             <div class="interactive"></div>   
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-logo" href="index.html"><img src="imgs/logo.png" alt="Website Logo" style="width: 100px; height: 100px;"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+    
+    <header class="pt-4">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark custom-navbar mt-4">
+            <div class="container">
+
+                <a class="navbar-brand ms-5" href="index.html">
+                <img src="imgs/logo.png" width="90" height="60" alt="Logo">
+                </a>
+
+                <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end pe-4" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Privacy Policy</a>
+                    <a class="nav-link" href="privacy_policy.html">Privacy Policy</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
+                </div>
             </div>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <main>
-        <h1>Privacy Policy</h1>
+    <main class="page-main">
+        <section class="content-card">
+            <header class="content-header">
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">
+                Your privacy matters. This app is designed to be transparent, minimal, and secure.
+            </p>
+            </header>
 
-        <p>Your privacy is important to us. This application was designed with user security and transparency in mind.</p>
+            <div class="content-body">
+            <div class="policy-section">
+                <h2>Camera Access</h2>
+                <p>
+                Our website requests access to your device camera only when you choose to activate it.
+                Camera access is handled directly by your browser and requires your explicit permission.
+                </p>
+                <p class="policy-note">We never access your camera without your consent.</p>
+            </div>
 
-        <h4>Camera Access</h4>
-        
-        <p>Our website requests access to your device camera only when you choose to activate it. Camera access is handled directly by your browser and requires your explicit permission.</p>
+            <div class="policy-section">
+                <h2>Data Collection</h2>
+                <p>
+                This application does not collect, store, or transmit personal data to any server.
+                </p>
+                <p class="policy-note">
+                All photos remain on your device and are processed locally within your browser session.
+                </p>
+            </div>
 
-        <p>We do not access your camera without your consent.</p>
+            <div class="policy-section">
+                <h2>Third-Party Services</h2>
+                <p>
+                We do not share user data with third parties. No personal information is sold, stored, or distributed.
+                </p>
+            </div>
 
-        <h4>Data Collection</h4>
-        
-        <p>This application does not collect, store, or transmit personal data to any server.</p>
+            <div class="policy-section">
+                <h2>Security</h2>
+                <p>
+                Camera permissions are managed entirely by your browser. You may revoke access at any time through your
+                browser settings.
+                </p>
+            </div>
 
-        <p>All photos captured remain on your device and are processed locally within your browser session.</p>
-
-        <h4>Third-Party Services</h4>
-        
-        <p> We do not share user data with third parties. No personal information is sold, stored, or distributed.</p>
-
-        <h4>Security</h4>
-        
-        <p>Camera permissions are managed entirely by your browser. You may revoke access at any time through your browser settings.</p>
-
-        <h4>Changes to This Policy</h4>
-        
-        <p>We may update this Privacy Policy if new features are added. Any changes will be reflected on this page.</p>
-
-        <p>If you have any questions regarding this policy, please contact us.</p>
+            <div class="policy-section">
+                <h2>Changes to This Policy</h2>
+                <p>
+                We may update this Privacy Policy if new features are added. Any changes will be reflected on this page.
+                </p>
+            </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-container">
-            
-            <div class="footer-brand">
-                <h3>Photobooth</h3>
-                <p>Create. Pose. Capture.</p>
-            </div>
 
-            <div class="footer-bottom">
-                <p>© <span id="year"></span> Photobooth. All rights reserved.</p>
-            </div>
+    <footer class="footer-full mt-5">
+        <div class="footer-inner">
+        <div>
+            <h3 class="m-0">Photobooth</h3>
+            <p class="m-0 opacity-75">Create. Pose. Capture.</p>
+        </div>
 
+        <p class="m-0 opacity-75">© <span id="year"></span> Photobooth. All rights reserved.</p>
         </div>
     </footer>
 

@@ -1,0 +1,46 @@
+.page-main {
+    padding: clamp(24px, 6vw, 64px) clamp(16px, 6vw, 80px);
+}
+
+.policy-section{
+    padding: 14px 0;
+    border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+.policy-section:first-of-type{
+    border-top: none;
+    padding-top: 0;
+}
+
+.policy-section h2{
+    margin: 0 0 8px 0;
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+    font-weight: 700;
+}
+
+.policy-note{
+    margin-top: 8px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.10);
+    opacity: 0.92;
+}
+
+.policy-footer{
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.10);
+    opacity: 0.9;
+}
+
+.policy-footer a{
+    color: #fff;
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+.policy-footer a:hover{
+    opacity: 1;
+}
+
