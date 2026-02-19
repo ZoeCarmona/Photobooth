@@ -7,29 +7,39 @@
     <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
-    <div class="gradient-bg">
+<div class="gradient-bg">
         <div class="gradients-container">
             <div class="g1"></div>
             <div class="g2"></div>
             <div class="g3"></div>
             <div class="g4"></div>
-            <div class="g5"></div> 
-            <div class="interactive"></div>   
+            <div class="g5"></div>
+            <div class="interactive"></div>
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-logo" href="index.html"><img src="imgs/logo.png" alt="Website Logo" style="width: 100px; height: 100px;"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+    <header class="pt-4">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark custom-navbar mt-4">
+            <div class="container">
+
+                <a class="navbar-brand ms-5" href="index.html">
+                <img src="imgs/logo.png" width="90" height="60" alt="Logo">
+                </a>
+
+                <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end pe-4" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">About</a>
+                    <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="privacy_policy.html">Privacy Policy</a>
@@ -38,44 +48,61 @@
                     <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
+                </div>
             </div>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <main>
+    <main class="page-main">
+    <section class="content-card">
+        <header class="content-header">
         <h1>About This Project</h1>
+        <p class="subtitle">
+            A simple web photobooth to capture creative moments using custom frames, right from your browser.
+        </p>
+        </header>
 
-        <p>Welcome to my online photobooth experience! This project was created to let users capture creative photos using designed frames available on this page.</p>
+        <div class="content-body">
+        <p>
+            Welcome to my online photobooth experience! This project was created to let users capture creative photos
+            using designed frames available on this page.
+        </p>
 
-        <p>My goal is to provide a simple, fun, and accessible way to take photos alone or with friends (no downloads required). All you need is a device with a camera and an internet connection.</p>
+        <p>
+            My goal is to provide a simple, fun, and accessible way to take photos alone or with friends (no downloads required).
+            All you need is a device with a camera and an internet connection.
+        </p>
 
-        <p>The platform allows users to:</p>
-
-        <ul>
-            <li>Select from different photo frame templates</li>
-            <li>Activate their device camera securely</li>
-            <li>Capture and download their photos instantly</li>
+        <h2>What you can do</h2>
+        <ul class="feature-list">
+            <li><span class="dot"></span>Select from different photo frame templates</li>
+            <li><span class="dot"></span>Activate your device camera securely</li>
+            <li><span class="dot"></span>Capture and download your photos instantly</li>
         </ul>
 
-        <p>This project was built using modern web technologies including HTML, CSS, JavaScript, and responsive design principles to ensure a smooth experience across devices.</p>
+        <p>
+            This project was built using modern web technologies including HTML, CSS, JavaScript, and responsive design
+            principles to ensure a smooth experience across devices.
+        </p>
 
-        <p>Thank you for using my photobooth. Have fun creating your best moments!</p>
+        <p class="thanks">
+            Thank you for using my photobooth. Have fun creating your best moments!
+        </p>
 
-        <p>-Zoe</p>
+        <p class="signature">— Zoe</p>
+        </div>
+    </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-container">
-            
-            <div class="footer-brand">
-                <h3>Photobooth</h3>
-                <p>Create. Pose. Capture.</p>
-            </div>
+    <footer class="footer-full mt-5">
+        <div class="footer-inner">
+        <div>
+            <h3 class="m-0">Photobooth</h3>
+            <p class="m-0 opacity-75">Create. Pose. Capture.</p>
+        </div>
 
-            <div class="footer-bottom">
-                <p>© <span id="year"></span> Photobooth. All rights reserved.</p>
-            </div>
-
+        <p class="m-0 opacity-75">© <span id="year"></span> Photobooth. All rights reserved.</p>
         </div>
     </footer>
     
